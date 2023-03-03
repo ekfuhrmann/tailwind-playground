@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <title>Tailwind Playground</title>
+  </head>
+  <body
+    class="min-h-screen bg-slate-900 p-32 grid grid-cols-[240px_1fr] gap-32"
+  >
+    <nav class="py-32 flex-col">
+      <a href="/" class="h-40 inline-block text-lime-400">
+        <p class="sr-only">Go home</p>
+        <img src="/images/logo.svg" alt="" class="h-full" />
+      </a>
+    </nav>
+    <main class="bg-slate-800 rounded-3xl p-32 w-full min-h-[100vh-64px]">
+      <header class="flex justify-between gap-24">
+        <div class="space-y-8">
+          <h1 class="text-lg font-semibold">Example Dashboard</h1>
+          <h2 class="text-secondary-text empty:hidden" id="current-date"></h2>
+        </div>
+        <div class="flex items-center gap-10">
+          <input
+            type="text"
+            placeholder="search..."
+            class="h-48 px-16 rounded text-primary-text bg-slate-600 text-sm ring-inset ring-1 ring-slate-400 placeholder:text-secondary-text border p-8 transition-colors hover:bg-slate-600/80 focus:bg-slate-600/80"
+          />
+          <select
+            name="year"
+            id="year"
+            class="text-primary-text h-48 pr-24 rounded ring-inset ring-1 ring-slate-400 bg-slate-600 text-sm min-w-136 transition-colors hover:bg-slate-600/80 focus:bg-slate-600/80 pe-4"
+          >
+            <option value="2023">This Year</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+            <option value="2020">2020</option>
+            <option value="2019">2019</option>
+          </select>
+          <button
+            class="rect-48 flex rounded ring-inset ring-1 ring-slate-400 bg-slate-600 text-secondary-text transition-colors hover:bg-slate-600/80 active:bg-slate-600 active:text-primary-text"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="rect-24 m-auto"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"
+                fill="none"
+              />
+            </svg>
+          </button>
+          <button
+            class="rect-48 flex rounded ring-inset ring-1 ring-slate-400 bg-slate-600 text-secondary-text transition-colors hover:bg-slate-600/80 active:bg-slate-600 active:text-primary-text"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="rect-24 m-auto"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" fill="none" />
+              <circle cx="12" cy="7" r="4" fill="none" />
+            </svg>
+          </button>
+        </div>
+      </header>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
